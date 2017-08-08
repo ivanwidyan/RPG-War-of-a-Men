@@ -15,11 +15,9 @@ public class CursorAffordance : MonoBehaviour {
 	void Start () {
         cameraRaycaster = GetComponent<CameraRaycaster>();
 	}
-
-    // TODO fix issue with click to move and WASD conflicting and increasing speed
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
         switch (cameraRaycaster.layerHit)
         {
             case Layer.Walkable:
